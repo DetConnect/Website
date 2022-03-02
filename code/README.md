@@ -1,16 +1,8 @@
-# code
+### Building and Deploying to Github Pages
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+1. Build the site:
+`flutter build web --web-renderer html --release`
+2. Copy `/build/web/` into Github Pages repo
+3. Fix folders: make `/assets/assets/images/` to `/assets/images/`
+4. Local test with: `python3 -m http.server 8000`
+5. Push to Github
