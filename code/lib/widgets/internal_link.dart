@@ -13,7 +13,7 @@ class InternalLink extends StatelessWidget {
     this.icon = const Icon(
       Icons.play_arrow,
       size: 100,
-      color: Colors.blueAccent,
+      color: Colors.white,
     ),
   });
 

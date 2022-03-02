@@ -29,7 +29,7 @@ class TextCard extends StatelessWidget {
                     text: this.title,
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color: Colors.black,
+                        color: Colors.grey[200],
                         fontFamily: 'Roboto',
                         fontSize: 30),
                   ),
@@ -43,9 +43,9 @@ class TextCard extends StatelessWidget {
                   TextSpan(
                     text: this.text,
                     style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black,
-                        height: 1.5,
+                        fontWeight: FontWeight.normal,
+                        color: Colors.grey[200],
+                        height: 2.0,
                         fontFamily: 'Roboto',
                         fontSize: 18),
                   ),
@@ -56,7 +56,7 @@ class TextCard extends StatelessWidget {
       // Background
       decoration: new BoxDecoration(
         borderRadius: BorderRadius.all(Radius.circular(10)),
-        color: Colors.blueAccent[400],
+        color: Colors.blue[900],
         boxShadow: [
           BoxShadow(
             color: Colors.black.withOpacity(1),
