@@ -3,6 +3,7 @@ import 'package:code/widgets/text_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:code/extensions/hover_extension.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:http/http.dart' as http;
 
 class JoinMessage extends StatefulWidget {
@@ -60,7 +61,7 @@ class _JoinMessageState extends State<JoinMessage> {
         TextFormField(
           decoration: const InputDecoration(
             icon: Icon(
-              Icons.person,
+              FontAwesomeIcons.medal,
               color: Colors.white,
             ),
             labelText: 'Rank',
@@ -82,7 +83,7 @@ class _JoinMessageState extends State<JoinMessage> {
         TextFormField(
           decoration: const InputDecoration(
             icon: Icon(
-              Icons.person,
+              FontAwesomeIcons.sitemap,
               color: Colors.white,
             ),
             labelText: 'Position',
@@ -104,7 +105,7 @@ class _JoinMessageState extends State<JoinMessage> {
         TextFormField(
           decoration: const InputDecoration(
             icon: Icon(
-              Icons.person,
+              FontAwesomeIcons.building,
               color: Colors.white,
             ),
             labelText: 'Detachment',
