@@ -48,23 +48,28 @@ class _NavigationBarState extends State<NavigationBar> {
           ),
         ]),
         actions: [
-          _NavigationBarItem("Mission", 0, page == 0),
-          _NavigationBarItem("Join Us", 1, page == 1),
-          _NavigationBarLink(
-            "https://detconnect.slack.com",
-            const Icon(
-              FontAwesomeIcons.slack,
-              size: 20,
-              color: Colors.grey,
-            ),
-          ),
-          _NavigationBarLink(
-            "https://drive.google.com/drive/u/0/folders/0AC-pLgUaHqASUk9PVA",
-            const Icon(
-              FontAwesomeIcons.googleDrive,
-              size: 20,
-              color: Colors.grey,
-            ),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              _NavigationBarItem("Mission", 0, page == 0),
+              _NavigationBarItem("Join Us", 1, page == 1),
+              _NavigationBarLink(
+                "https://detconnect.slack.com",
+                const Icon(
+                  FontAwesomeIcons.slack,
+                  size: 20,
+                  color: Colors.grey,
+                ),
+              ),
+              _NavigationBarLink(
+                "https://drive.google.com/drive/u/0/folders/0AC-pLgUaHqASUk9PVA",
+                const Icon(
+                  FontAwesomeIcons.googleDrive,
+                  size: 20,
+                  color: Colors.grey,
+                ),
+              ),
+            ],
           ),
         ],
       ),
@@ -88,23 +93,20 @@ class _NavigationBarItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(15),
+      padding: const EdgeInsets.symmetric(horizontal: 10),
       child: MouseRegion(
         cursor: SystemMouseCursors.click,
         child: GestureDetector(
           child: RichText(
+            textAlign: TextAlign.center,
             text: TextSpan(
-                style: DefaultTextStyle.of(context).style,
-                children: <TextSpan>[
-                  TextSpan(
-                    text: this.title,
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 25,
-                        color: current ? Colors.white : Colors.grey,
-                        fontFamily: 'Roboto'),
-                  ),
-                ]),
+              text: this.title,
+              style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 25,
+                  color: current ? Colors.white : Colors.grey,
+                  fontFamily: 'Roboto'),
+            ),
           ),
           onTap: () {
             NavigationBar.of(context).setPage(pageId);
@@ -128,7 +130,7 @@ class _NavigationBarLink extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(10),
+      padding: const EdgeInsets.symmetric(horizontal: 10),
       child: MouseRegion(
         cursor: SystemMouseCursors.click,
         child: GestureDetector(
