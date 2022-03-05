@@ -253,7 +253,8 @@ class _JoinMessageState extends State<JoinMessage> {
   }
 
   Future<http.Response> sendRequest() async {
-    var url = Uri.parse("https://formsubmit.co/bek7883@rit.edu");
+    var url =
+        Uri.parse("https://formsubmit.co/448bad8b92702c06d4c6bd7723a0d8af");
     return await http.post(url, headers: {
       "Accept": "application/json",
     }, body: {
