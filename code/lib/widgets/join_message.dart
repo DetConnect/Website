@@ -212,7 +212,7 @@ class _JoinMessageState extends State<JoinMessage> {
                     setState(() {
                       this._errorOpacity = 1;
                       this._errorMessage =
-                          "Error: data did not send, please try again or email bek7883@rit.edu with you information!";
+                          "Error: connection to server failed, please check your internet connection and try again!";
                     });
                   }
                 });
@@ -226,20 +226,34 @@ class _JoinMessageState extends State<JoinMessage> {
 
   @override
   Widget build(BuildContext context) {
-    return AnimatedSwitcher(
-        duration: Duration(seconds: 1),
-        // transitionBuilder: (Widget child, Animation<double> animation) {
-        //   var tween = Tween<Offset>(begin: Offset(1, 0), end: Offset(0, 0));
-        //   return SlideTransition(
-        //     child: child,
-        //     position: tween.animate(animation),
-        //   );
-        // },
-        child: _myAnimatedWidget);
+    return Column(children: [
+      AnimatedSwitcher(
+          duration: Duration(seconds: 1), child: _myAnimatedWidget),
+      AnimatedOpacity(
+          child: Padding(
+            padding: EdgeInsets.all(0),
+            child: RichText(
+              text: TextSpan(
+                  style: DefaultTextStyle.of(context).style,
+                  children: <TextSpan>[
+                    TextSpan(
+                      text: this._errorMessage,
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.red,
+                          fontFamily: 'Roboto',
+                          fontSize: 30),
+                    ),
+                  ]),
+            ),
+          ),
+          opacity: this._errorOpacity,
+          duration: const Duration(milliseconds: 500)),
+    ]);
   }
 
   Future<http.Response> sendRequest() async {
-    var url = Uri.parse("https://formspree.io/f/xyyojeva");
+    var url = Uri.parse("https://formsubmit.co/bek7883@rit.edu");
     return await http.post(url, headers: {
       "Accept": "application/json",
     }, body: {
