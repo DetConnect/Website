@@ -91,7 +91,7 @@ class _JoinMessageState extends State<JoinMessage> {
             TextFormField(
               decoration: const InputDecoration(
                 icon: Icon(
-                  FontAwesomeIcons.sitemap,
+                  FontAwesomeIcons.users,
                   color: Colors.white,
                 ),
                 labelText: 'Position',
@@ -203,7 +203,8 @@ class _JoinMessageState extends State<JoinMessage> {
                         setState(() {
                           this._errorOpacity = 1;
                           this._errorMessage =
-                              "Error: connection to server failed, please check your internet connection and try again!";
+                              "Error: connection to server failed, please check your internet connection and try again! " +
+                                  value.statusCode.toString();
                         });
                       }
                     });
@@ -260,8 +261,7 @@ class _JoinMessageState extends State<JoinMessage> {
   }
 
   Future<http.Response> sendRequest() async {
-    var url =
-        Uri.parse("https://formsubmit.co/448bad8b92702c06d4c6bd7723a0d8af");
+    var url = Uri.parse("https://formsubmit.co/brendaniskapp@gmail.com");
     return await http.post(url, headers: {
       "Accept": "application/json",
     }, body: {
