@@ -26,13 +26,6 @@ class Mission extends StatelessWidget {
                 ),
               ),
               TextCard(
-                  title: "DEMO PRODUCT",
-                  text:
-                      "Work in progress, we will not be responding to anything yet, the product is not complete."),
-              Padding(
-                padding: const EdgeInsets.all(15),
-              ),
-              TextCard(
                   title: "What is DetConnect?",
                   text:
                       "DetConnect is the premier toolset to enable cadet communication between Air Force ROTC detachments"),
