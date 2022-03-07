@@ -22,7 +22,9 @@ class Join extends StatelessWidget {
                     image: ExactAssetImage("images/IconWhite.png")),
               ),
             ),
-            JoinMessage(),
+            JoinMessage(
+              buildContext: context,
+            ),
           ],
         ),
       ),

@@ -7,10 +7,12 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:http/http.dart' as http;
 
 class JoinMessage extends StatefulWidget {
+  final BuildContext buildContext;
+
   // You can also pass the translation in here if you want to
-  JoinMessage({Key key}) : super(key: key);
+  JoinMessage({Key key, this.buildContext}) : super(key: key);
   @override
-  _JoinMessageState createState() => _JoinMessageState();
+  _JoinMessageState createState() => _JoinMessageState(this.buildContext);
 }
 
 class _JoinMessageState extends State<JoinMessage> {
@@ -26,11 +28,11 @@ class _JoinMessageState extends State<JoinMessage> {
   double _errorOpacity = 0;
   String _errorMessage = "";
 
-  _JoinMessageState() {
+  _JoinMessageState(BuildContext buildContext) {
     _myAnimatedWidget = Row(
       children: [
         Padding(
-          padding: EdgeInsets.all(50),
+          padding: EdgeInsets.all(getPaddingSize(buildContext)),
         ),
         Expanded(
             child: Column(
@@ -212,7 +214,7 @@ class _JoinMessageState extends State<JoinMessage> {
           ],
         )),
         Padding(
-          padding: EdgeInsets.all(50),
+          padding: EdgeInsets.all(getPaddingSize(buildContext)),
         ),
       ],
     );
@@ -249,7 +251,12 @@ class _JoinMessageState extends State<JoinMessage> {
   // Used to dynamically size the grid
   double getPaddingSize(BuildContext context) {
     double screenSize = MediaQuery.of(context).size.width;
-    return (screenSize / 700);
+    if (screenSize < 800) {
+      return 0;
+    } else if (screenSize < 1400) {
+      return 100;
+    }
+    return 200;
   }
 
   Future<http.Response> sendRequest() async {
