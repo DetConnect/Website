@@ -49,6 +49,13 @@ class Mission extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(15),
               ),
+              TextCard(
+                  title: "Who's online?",
+                  text:
+                      "Check out the map below to see which detachments are on DetConnect"),
+              Padding(
+                padding: const EdgeInsets.all(15),
+              ),
               ConnectedMap(),
               Padding(
                 padding: const EdgeInsets.all(15),

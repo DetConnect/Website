@@ -1,6 +1,7 @@
 import 'dart:html';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'package:syncfusion_flutter_maps/maps.dart';
 
@@ -15,11 +16,7 @@ class _ConnectedMapState extends State<ConnectedMap> {
   MapShapeSource _dataSource;
 
   var stateData = <_StateDets>[
-    _StateDets("New York", 2),
-    _StateDets("Virginia", 1),
-    _StateDets("West Virginia", 3),
-    _StateDets("Pennsylvania", 1),
-    _StateDets("Maryland", 5),
+    _StateDets("New York", 3, "RIT - Cornell - Clarkson"),
   ];
 
   @override
@@ -29,7 +26,7 @@ class _ConnectedMapState extends State<ConnectedMap> {
       shapeDataField: 'NAME',
       dataCount: stateData.length,
       primaryValueMapper: (int index) => stateData[index].state,
-      shapeColorValueMapper: (int index) => stateData[index].dets,
+      shapeColorValueMapper: (int index) => stateData[index].count,
       shapeColorMappers: <MapColorMapper>[
         const MapColorMapper(
             from: 0, to: 1, color: Color.fromRGBO(144, 202, 249, 1), text: '1'),
@@ -70,6 +67,49 @@ class _ConnectedMapState extends State<ConnectedMap> {
                       fontSize: 14,
                       fontWeight: FontWeight.bold,
                       color: Colors.white)),
+              shapeTooltipBuilder: (BuildContext context, int index) {
+                return Container(
+                  width: (50.0 + stateData[index].count * 50),
+                  padding: const EdgeInsets.all(10),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Stack(
+                        children: [
+                          Center(
+                            child: Text(
+                              stateData[index].state,
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 14),
+                            ),
+                          ),
+                          const Icon(
+                            FontAwesomeIcons.building,
+                            color: Colors.white,
+                            size: 16,
+                          ),
+                        ],
+                      ),
+                      const Divider(
+                        color: Colors.white,
+                        height: 10,
+                        thickness: 1.2,
+                      ),
+                      Text(
+                        stateData[index].dets,
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 14,
+                        ),
+                      ),
+                    ],
+                  ),
+                );
+              },
+              tooltipSettings: const MapTooltipSettings(
+                  color: Colors.blue,
+                  strokeColor: Color.fromRGBO(252, 187, 15, 1),
+                  strokeWidth: 1.5),
             ),
           ],
         ),
@@ -79,8 +119,9 @@ class _ConnectedMapState extends State<ConnectedMap> {
 }
 
 class _StateDets {
-  _StateDets(this.state, this.dets);
+  _StateDets(this.state, this.count, this.dets);
 
   final String state;
-  final int dets;
+  final int count;
+  final String dets;
 }
