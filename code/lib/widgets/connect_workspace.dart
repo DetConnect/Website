@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:code/widgets/link.dart';
-import 'package:code/extensions/hover_extension.dart';
+
+import 'package:detconnect/extensions/hover_extension.dart';
+
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class ConnectWorkspace extends StatelessWidget {
