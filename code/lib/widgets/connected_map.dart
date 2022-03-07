@@ -16,7 +16,9 @@ class _ConnectedMapState extends State<ConnectedMap> {
   MapShapeSource _dataSource;
 
   var stateData = <_StateDets>[
-    _StateDets("New York", 3, "RIT - Cornell - Clarkson"),
+    _StateDets("New York", 4, "RIT - Cornell - Clarkson - RPI"),
+    _StateDets("Ohio", 1, "Ohio State"),
+    _StateDets("Virginia", 2, "VT - UVA")
   ];
 
   @override
