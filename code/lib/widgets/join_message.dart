@@ -1,8 +1,10 @@
 import 'dart:html';
-import 'package:code/widgets/text_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:code/extensions/hover_extension.dart';
+
+import 'package:detconnect/extensions/hover_extension.dart';
+import 'package:detconnect/widgets/text_card.dart';
+
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:http/http.dart' as http;
 

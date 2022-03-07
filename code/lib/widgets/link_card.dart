@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:code/widgets/text_card.dart';
-import 'package:code/widgets/internal_link.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
+import 'package:detconnect/widgets/text_card.dart';
+import 'package:detconnect/widgets/internal_link.dart';
 
 class LinkCard extends StatefulWidget {
   final String title;

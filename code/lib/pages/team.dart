@@ -1,7 +1,7 @@
-import 'package:code/widgets/team_contributor.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:code/widgets/team_contributor.dart';
+
+import 'package:detconnect/widgets/team_contributor.dart';
 
 class Team extends StatelessWidget {
   @override

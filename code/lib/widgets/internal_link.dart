@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'dart:html' as html;
-import 'package:code/widgets/navigation_bar.dart';
-import 'package:code/extensions/hover_extension.dart';
+
+import 'package:detconnect/widgets/navigation_bar.dart';
+import 'package:detconnect/extensions/hover_extension.dart';
 
 class InternalLink extends StatelessWidget {
   final int page;

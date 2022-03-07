@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'dart:html' as html;
-import 'package:code/extensions/hover_extension.dart';
+
+import 'package:detconnect/extensions/hover_extension.dart';
 
 class Link extends StatelessWidget {
   final String link;

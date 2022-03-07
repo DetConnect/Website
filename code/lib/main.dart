@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:code/widgets/navigation_bar.dart';
+import 'package:detconnect/widgets/navigation_bar.dart';
 
 void main() {
   runApp(Home());

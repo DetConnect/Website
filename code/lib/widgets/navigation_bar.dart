@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'dart:html' as html;
-import 'package:code/pages/mission.dart';
-import 'package:code/pages/join.dart';
-import 'package:code/extensions/hover_extension.dart';
+
+import 'package:detconnect/pages/mission.dart';
+import 'package:detconnect/pages/join.dart';
+import 'package:detconnect/extensions/hover_extension.dart';
+
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class NavigationBar extends StatefulWidget {

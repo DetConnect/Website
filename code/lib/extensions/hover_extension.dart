@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:code/widgets/scale_on_hover.dart';
 import 'dart:html' as html;
-import 'package:code/widgets/translate_on_hover.dart';
+
+import 'package:detconnect/widgets/scale_on_hover.dart';
+import 'package:detconnect/widgets/translate_on_hover.dart';
 
 extension HoverExtensions on Widget {
   // Get a regerence to the body of the view

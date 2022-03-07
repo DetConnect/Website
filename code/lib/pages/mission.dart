@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:code/widgets/link_card.dart';
-import 'package:code/widgets/text_card.dart';
-import 'package:code/widgets/join_message.dart';
+
+import 'package:detconnect/widgets/link_card.dart';
+import 'package:detconnect/widgets/text_card.dart';
+import 'package:detconnect/widgets/connected_map.dart';
 
 class Mission extends StatelessWidget {
   @override
@@ -45,6 +46,10 @@ class Mission extends StatelessWidget {
                     "• To share GLPs, Org Charts, etc. to bring creative new ideas into our detachments\n"
                     "• To increase camaraderie and interconnectivity between detachments",
               ),
+              Padding(
+                padding: const EdgeInsets.all(15),
+              ),
+              ConnectedMap(),
               Padding(
                 padding: const EdgeInsets.all(15),
               ),

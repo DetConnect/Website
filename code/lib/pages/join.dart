@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:code/widgets/text_card.dart';
-import 'package:code/widgets/join_message.dart';
+
+import 'package:detconnect/widgets/join_message.dart';
 
 class Join extends StatelessWidget {
   @override
