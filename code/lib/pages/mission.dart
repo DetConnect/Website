@@ -25,6 +25,13 @@ class Mission extends StatelessWidget {
                 ),
               ),
               TextCard(
+                  title: "DEMO PRODUCT",
+                  text:
+                      "Work in progress, we will not be responding to anything yet, the product is not complete."),
+              Padding(
+                padding: const EdgeInsets.all(15),
+              ),
+              TextCard(
                   title: "What is DetConnect?",
                   text:
                       "DetConnect is the premier toolset to enable cadet communication between Air Force ROTC detachments"),
@@ -33,10 +40,10 @@ class Mission extends StatelessWidget {
               ),
               TextCard(
                 title: "Why join DetConnect?",
-                text:
-                    "• To help organize joint events between detachments such as a joint virtual career day\n"
+                text: "• To help organize joint events between detachments\n"
                     "• To connect graduating AS400s with others in their AFSCs\n"
-                    "• To share GLPs, Org Charts, etc. to bring creative new ideas into our detachments",
+                    "• To share GLPs, Org Charts, etc. to bring creative new ideas into our detachments\n"
+                    "• To increase camaraderie and interconnectivity between detachments",
               ),
               Padding(
                 padding: const EdgeInsets.all(15),
