@@ -1,3 +1,4 @@
+import 'package:detconnect/widgets/time_online.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
@@ -42,10 +43,20 @@ class Mission extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(15),
               ),
-              TextCard(
-                  title: "Who's online?",
-                  text:
-                      "Check out the map below to see which detachments are on DetConnect"),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  TextCard(
+                      title: "Who's online?",
+                      text:
+                          "Check out the map below to see which detachments are on DetConnect"),
+                  Padding(
+                    padding: const EdgeInsets.all(15),
+                  ),
+                  TimeOnline(),
+                ],
+              ),
               Padding(
                 padding: const EdgeInsets.all(15),
               ),
@@ -62,13 +73,13 @@ class Mission extends StatelessWidget {
                       page: 1),
                 ],
               ),
-              Padding(
-                padding: const EdgeInsets.all(15),
-              ),
-              TextCard(
-                  title: "Already a member?",
-                  text:
-                      "Click the links in the navigation bar for quick access to the platform"),
+              // Padding(
+              //   padding: const EdgeInsets.all(15),
+              // ),
+              // TextCard(
+              //     title: "Already a member?",
+              //     text:
+              //         "Click the links in the navigation bar for quick access to the platform"),
             ],
           ),
         ),
