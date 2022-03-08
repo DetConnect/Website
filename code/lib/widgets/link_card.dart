@@ -47,9 +47,11 @@ class _LinkCardState extends State<LinkCard> {
                 padding: const EdgeInsets.all(15),
                 child:
                     Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                  //Padding(padding: EdgeInsets.all(50)),
-                  TextCard(title: this.title, text: this.text),
-                  //Padding(padding: EdgeInsets.all(50)),
+                  TextCard(
+                    title: this.title,
+                    text: this.text,
+                    haveBorder: true,
+                  ),
                 ])),
       ),
     );

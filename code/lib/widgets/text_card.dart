@@ -4,10 +4,12 @@ import 'package:flutter/rendering.dart';
 class TextCard extends StatelessWidget {
   final String title;
   final String text;
+  final bool haveBorder;
 
   const TextCard({
     this.title = "Title",
     this.text = "Text",
+    this.haveBorder = false,
   });
 
   @override
@@ -52,6 +54,7 @@ class TextCard extends StatelessWidget {
       ),
       // Background
       decoration: new BoxDecoration(
+        border: haveBorder ? Border.all(color: Colors.white, width: 3) : null,
         borderRadius: BorderRadius.all(Radius.circular(10)),
         color: Colors.blue[900],
         boxShadow: [
