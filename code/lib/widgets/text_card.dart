@@ -56,7 +56,7 @@ class TextCard extends StatelessWidget {
       decoration: new BoxDecoration(
         border:
             haveBorder ? Border.all(color: Colors.white, width: 3) : Border(),
-        borderRadius: BorderRadius.all(Radius.circular(10)),
+        borderRadius: BorderRadius.all(Radius.circular(7)),
         color: Colors.blue[900],
         boxShadow: [
           BoxShadow(

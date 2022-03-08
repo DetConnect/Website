@@ -181,6 +181,18 @@ class _JoinMessageState extends State<JoinMessage> {
                     });
                   } else {
                     var response = sendRequest();
+                    setState(() {
+                      this._errorOpacity = 0;
+                      this._myAnimatedWidget = Container(
+                        padding: EdgeInsets.all(200),
+                        decoration: BoxDecoration(
+                          shape: BoxShape.rectangle,
+                          image: DecorationImage(
+                              fit: BoxFit.contain,
+                              image: ExactAssetImage("images/satellite.gif")),
+                        ),
+                      );
+                    });
                     response.then((value) {
                       if (value.statusCode == 200) {
                         // response is good
