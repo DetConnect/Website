@@ -38,7 +38,8 @@ class Mission extends StatelessWidget {
                 text: "• To help organize joint events between detachments\n"
                     "• To connect graduating AS400s with others in their AFSCs\n"
                     "• To share GLPs, Org Charts, etc. to bring creative new ideas into our detachments\n"
-                    "• To increase camaraderie and interconnectivity between detachments",
+                    "• To increase camaraderie and interconnectivity between detachments\n"
+                    "• Got an idea? Join us and let us know!",
               ),
               Padding(
                 padding: const EdgeInsets.all(15),
