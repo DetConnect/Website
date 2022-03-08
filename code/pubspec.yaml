@@ -56,6 +56,7 @@ flutter:
   assets:
     - assets/images/Icon.png
     - assets/images/IconWhite.png
+    - assets/images/IconWhite.gif
     - assets/images/bluebackground.jpg
     - assets/images/usetransparent.png
     - assets/text/us.json

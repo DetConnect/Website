@@ -19,7 +19,7 @@ class Join extends StatelessWidget {
                 shape: BoxShape.rectangle,
                 image: DecorationImage(
                     fit: BoxFit.contain,
-                    image: ExactAssetImage("images/IconWhite.png")),
+                    image: ExactAssetImage("images/IconWhite.gif")),
               ),
             ),
             JoinMessage(
