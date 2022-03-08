@@ -43,24 +43,45 @@ class Mission extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(15),
               ),
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  TextCard(
-                      title: "Who's online?",
-                      text:
-                          "Check out the map below to see which detachments are on DetConnect"),
-                  Padding(
-                    padding: const EdgeInsets.all(15),
-                  ),
-                  TimeOnline(),
-                ],
-              ),
-              Padding(
-                padding: const EdgeInsets.all(15),
-              ),
-              ConnectedMap(),
+              MediaQuery.of(context).size.width > 800
+                  ? Flex(
+                      direction: Axis.vertical,
+                      children: [
+                        Row(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            TextCard(
+                                title: "Who's online?",
+                                text:
+                                    "Check out the map below to see which detachments are on DetConnect"),
+                            Padding(
+                              padding: const EdgeInsets.all(15),
+                            ),
+                            TimeOnline(),
+                          ],
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(15),
+                        ),
+                        ConnectedMap(),
+                      ],
+                    )
+                  : Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        TextCard(
+                            title: "Who's online?",
+                            text:
+                                "Check out the map below to see which detachments are on DetConnect"),
+                        Padding(
+                          padding: const EdgeInsets.all(15),
+                        ),
+                        ConnectedMap(),
+                      ],
+                    ),
+
               Padding(
                 padding: const EdgeInsets.all(15),
               ),
