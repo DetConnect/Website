@@ -69,7 +69,7 @@ class _ConnectedMapState extends State<ConnectedMap> {
                       color: Colors.white)),
               shapeTooltipBuilder: (BuildContext context, int index) {
                 return Container(
-                  width: (50.0 + stateData[index].count * 50),
+                  width: (100.0 + stateData[index].count * 30),
                   padding: const EdgeInsets.all(10),
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
