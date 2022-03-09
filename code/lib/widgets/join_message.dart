@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'dart:html';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
@@ -219,6 +220,13 @@ class _JoinMessageState extends State<JoinMessage> {
                           this._errorMessage =
                               "Error: connection to server failed, please check your internet connection and try again! " +
                                   value.statusCode.toString();
+                          print("Headers:\n\n" + value.headers.toString());
+                          print("\n\nBody:\n\n" + value.body.toString());
+                          print("\n\nRequest:\n\n" + value.request.toString());
+                          print("\n\nReason:\n\n" +
+                              value.reasonPhrase.toString());
+                          print("\n\nStatus Code:\n\n" +
+                              value.statusCode.toString());
                         });
                       }
                     });
@@ -275,16 +283,19 @@ class _JoinMessageState extends State<JoinMessage> {
   }
 
   Future<http.Response> sendRequest() async {
-    var url = Uri.parse("https://formsubmit.co/detconnect.data@gmail.com");
-    return await http.post(url, headers: {
-      "Accept": "application/json",
-    }, body: {
-      "application": "production",
-      "name": this.name,
-      "rank": this.rank,
-      "position": this.position,
-      "detachment": this.detachment,
-      "email": this.email,
-    });
+    var url = Uri.parse(
+        "https://docs.google.com/forms/d/e/1FAIpQLSfMNjeOPH00SWJuq96NVivYRtO3_c6B8hKS9lCGwZyMKo9__A/formResponse");
+    return await http.post(url,
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: jsonEncode({
+          "entry.1554010336": this.name,
+          "entry.1624539484": this.rank,
+          "entry.493679197": this.position,
+          "entry.1117501243": this.detachment,
+          "entry.1567459666": this.email,
+          "submit": "Submit",
+        }));
   }
 }
