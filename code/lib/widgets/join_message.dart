@@ -195,8 +195,8 @@ class _JoinMessageState extends State<JoinMessage> {
                       );
                     });
                     response.then((value) {
-                      print(value.body.toString());
-                      if (value.statusCode == 200) {
+                      if (value.statusCode == 200 &&
+                          value.body.toString() == "\"Success\"") {
                         // response is good
                         setState(() {
                           this._errorOpacity = 0;
@@ -221,13 +221,6 @@ class _JoinMessageState extends State<JoinMessage> {
                           this._errorMessage =
                               "Error: connection to server failed, please check your internet connection and try again! " +
                                   value.statusCode.toString();
-                          print("Headers:\n\n" + value.headers.toString());
-                          print("\n\nBody:\n\n" + value.body.toString());
-                          print("\n\nRequest:\n\n" + value.request.toString());
-                          print("\n\nReason:\n\n" +
-                              value.reasonPhrase.toString());
-                          print("\n\nStatus Code:\n\n" +
-                              value.statusCode.toString());
                         });
                       }
                     });
