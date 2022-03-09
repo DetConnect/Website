@@ -281,7 +281,7 @@ class _JoinMessageState extends State<JoinMessage> {
         "https://script.google.com/macros/s/AKfycbyd4tS7sL91cIz-If9880lDWcHXCKYvY5AKfHqqn0lqwFZaz_oLX3Q8E1TpLAUHOeqiog/exec");
     return await http.post(url,
         headers: {
-          "Content-Type": "application/json",
+          "Content-Type": "text/plain",
         },
         body: jsonEncode({
           "name": this.name,
