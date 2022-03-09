@@ -195,6 +195,7 @@ class _JoinMessageState extends State<JoinMessage> {
                       );
                     });
                     response.then((value) {
+                      print(value.body.toString());
                       if (value.statusCode == 200) {
                         // response is good
                         setState(() {
@@ -284,18 +285,17 @@ class _JoinMessageState extends State<JoinMessage> {
 
   Future<http.Response> sendRequest() async {
     var url = Uri.parse(
-        "https://docs.google.com/forms/d/e/1FAIpQLSfMNjeOPH00SWJuq96NVivYRtO3_c6B8hKS9lCGwZyMKo9__A/formResponse");
+        "https://script.google.com/macros/s/AKfycbyd4tS7sL91cIz-If9880lDWcHXCKYvY5AKfHqqn0lqwFZaz_oLX3Q8E1TpLAUHOeqiog/exec");
     return await http.post(url,
         headers: {
           "Content-Type": "application/json",
         },
         body: jsonEncode({
-          "entry.1554010336": this.name,
-          "entry.1624539484": this.rank,
-          "entry.493679197": this.position,
-          "entry.1117501243": this.detachment,
-          "entry.1567459666": this.email,
-          "submit": "Submit",
+          "name": this.name,
+          "rank": this.rank,
+          "position": this.position,
+          "detachment": this.detachment,
+          "email": this.email,
         }));
   }
 }
