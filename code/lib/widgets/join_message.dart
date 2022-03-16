@@ -184,15 +184,20 @@ class _JoinMessageState extends State<JoinMessage> {
                     var response = sendRequest();
                     setState(() {
                       this._errorOpacity = 0;
-                      this._myAnimatedWidget = Container(
-                        padding: EdgeInsets.all(200),
-                        decoration: BoxDecoration(
-                          shape: BoxShape.rectangle,
-                          image: DecorationImage(
-                              fit: BoxFit.contain,
-                              image: ExactAssetImage("images/satellite.gif")),
+                      this._myAnimatedWidget = Column(children: [
+                        Container(
+                          padding: EdgeInsets.all(50),
+                          decoration: BoxDecoration(
+                            shape: BoxShape.rectangle,
+                            image: DecorationImage(
+                                fit: BoxFit.contain,
+                                image: ExactAssetImage("images/satellite.gif")),
+                          ),
                         ),
-                      );
+                        Padding(
+                          padding: EdgeInsets.all(200),
+                        )
+                      ]);
                     });
                     response.then((value) {
                       if (value.statusCode == 200 &&
