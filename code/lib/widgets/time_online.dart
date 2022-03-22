@@ -58,7 +58,7 @@ class TimeOnline extends StatelessWidget {
   }
 
   int daysOnline() {
-    final online = DateTime.utc(2022, 3, 15);
+    final online = DateTime.utc(2022, 3, 21);
     final difference = DateTime.now().difference(online);
     return (difference.inDays);
   }
