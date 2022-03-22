@@ -6,3 +6,7 @@
 3. Fix folders: make `/assets/assets/images/` to `/assets/images/`
 4. Local test with: `python3 -m http.server 8000`
 5. Push to Github
+
+### Updating Map
+
+Update the data in `connected_map.dart` to update the map
