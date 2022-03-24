@@ -18,6 +18,9 @@ class _ConnectedMapState extends State<ConnectedMap> {
   var stateData = <_StateDets>[
     _StateDets("New York", 4, "RIT - Syracuse - Clarkson - Cornell"),
     _StateDets("Wisconsin", 1, "UW Madison"),
+    _StateDets("Vermont", 1, "Norwich"),
+    _StateDets("New Jersey", 1, "Rutgers"),
+    _StateDets("Massachusetts", 1, "MIT"),
   ];
 
   @override
@@ -70,7 +73,7 @@ class _ConnectedMapState extends State<ConnectedMap> {
                       color: Colors.white)),
               shapeTooltipBuilder: (BuildContext context, int index) {
                 return Container(
-                  width: (100.0 + stateData[index].count * 30),
+                  width: (100.0 + stateData[index].count * 40),
                   padding: const EdgeInsets.all(10),
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
