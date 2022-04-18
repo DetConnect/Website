@@ -18,12 +18,19 @@ class _ConnectedMapState extends State<ConnectedMap> {
   var stateData = <_StateDets>[
     _StateDets("New York", 4,
         "RIT - Syracuse - Clarkson - Cornell"), // 538, 535, 536, 520
-    _StateDets("Wisconsin", 1, "UW Madison"), // 925
+    _StateDets("Wisconsin", 2, "UW Madison - Marquette"), // 925, 930
     _StateDets("Vermont", 1, "Norwich"), // 867
     _StateDets("Michigan", 1, "MTU"), // 400
     _StateDets("New Jersey", 1, "Rutgers"), // 485
     _StateDets("Massachusetts", 1, "MIT"), // 365
     _StateDets("West Virginia", 1, "WVU"), // 915
+    _StateDets("California", 1, "CSU Fresno"), // 035
+    _StateDets("Tennessee", 1, "UT"), // 800
+    _StateDets("Mississippi", 1, "Ole Miss"), // 430
+    _StateDets("Pennsylvania", 1, "Penn State - Saint Joe's"), // 720, 750
+    _StateDets("Missouri", 1, "Missouri S&T"), // 442
+    _StateDets("Connecticut", 1, "Yale"), // 009
+    _StateDets("Florida", 1, "Embry-Riddle"), // 157
   ];
 
   @override
